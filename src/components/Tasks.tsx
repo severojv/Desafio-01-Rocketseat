@@ -1,14 +1,17 @@
 import styles from './Tasks.module.css'
 import { Trash } from 'phosphor-react';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState } from 'react';
 
 interface ComentProps {
     content: string;
-    deleteComent: (comment: string) => void;
+    deleteComent: (id: string, wasChecked: boolean) => void; 
+    onCheckChange: (content: string, isChecked: boolean) => void;
+    id: string;
 }
-export function Tasks({ content, deleteComent }: ComentProps) {
+
+export function Tasks({ content, deleteComent, onCheckChange, id }: ComentProps) {
     function handleDeleteComent() {
-        deleteComent(content);
+        deleteComent(id, isChecked);
     }
 
 
@@ -17,8 +20,9 @@ export function Tasks({ content, deleteComent }: ComentProps) {
 
 
     function handleCheckboxChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setIsChecked(event.target.checked);
-        console.log(isChecked);
+        const checked = event.target.checked;
+        setIsChecked(checked);
+        onCheckChange(content, checked);
     }
     
     return (
@@ -26,8 +30,9 @@ export function Tasks({ content, deleteComent }: ComentProps) {
             <label className={styles.labelGap}>
                 <input
                     type='checkbox'
-                    checked={isChecked}  // Controla o estado da checkbox
-                    onChange={handleCheckboxChange}  // Captura a mudança de estado
+                    checked={isChecked}  
+                    onChange={handleCheckboxChange}  
+                    
                 />
             </label>
             <p className={styles.content}>{content} </p>
