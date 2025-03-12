@@ -1,0 +1,40 @@
+body {
+    margin: 0; /* Remove margens do body */
+    padding: 0;
+    box-sizing: border-box; /* Garante espaçamento consistente */
+}
+
+.header {
+    background-color: var(--grey-700);
+    display: flex;
+    height: 12.5rem;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da página */
+    /*z-index: 1000; /* Fica acima de outros elementos */
+    gap: 1rem;
+}
+
+.header img {
+    height: 3rem;
+}
+
+main {
+    margin-top: 4rem; /* Espaço suficiente para o header */
+    padding: 1rem;
+}
+.header p{
+    font-size: 4rem;
+
+}
+.color1{
+    color: var(--blue);
+}
+.color2{
+    color: var(--purple);
+}
+.wrapper{
+    display: flex;
+    gap: 0;
+}

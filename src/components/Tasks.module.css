@@ -1,0 +1,25 @@
+.containerTasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 736px;
+    height: 72px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: var(--grey-500);
+    color: var(--grey-100);
+    font-size: 14px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.labelGap{
+}
+.trashButton{
+    background: transparent;
+    border: 0;
+    color: var(--grey-300);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}

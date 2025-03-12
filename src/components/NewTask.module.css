@@ -1,0 +1,48 @@
+.formulario {
+    display: flex;
+    height:54px;
+    font-size: 14px;
+    margin: 0 auto;
+    align-items: center;
+
+    justify-content: center;
+    gap: 1rem;
+    margin-top: -2rem;
+    border: 1rem;
+    color: var(--white);
+    width:736px;
+    
+
+
+}
+.tomagap{
+    padding: 2rem;
+}
+.space{
+    padding: 12px;
+}
+.textarea {
+    background: var(--grey-500);
+    border-radius: 8px;
+    color: var(--grey-100);
+    resize: none;
+    width: 638px;
+    height: 88%;
+
+}
+
+.button {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width:90px;
+    height: 52px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 14px;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
